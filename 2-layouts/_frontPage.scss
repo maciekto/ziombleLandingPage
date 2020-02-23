@@ -1,0 +1,77 @@
+@mixin frontBasixES{
+    .frontPage{
+        scroll-snap-align: center;
+        font-size: 2rem;
+        color: #DFE5F2;
+        width: 100vw;
+        height: 100vh;
+        background: url('cssimg/ziombleLandingPage.png') center center no-repeat;
+        background-size: cover;
+    }
+    .frontPageGrid{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 8fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "topS"
+        "panels"
+        "."
+        "."
+        "bottomS"
+        ;
+    }
+    .topSentence{
+        height: 3rem;
+        grid-area: topS;
+        display: flex;
+        padding-top: 5px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .panels{
+        grid-area: panels;
+        display: flex;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+    .bottomSentence{
+        font-size: 1.5rem;
+        height: 40px;
+        grid-area: bottomS;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 10px;
+        
+    }
+    .animateBottom{
+        animation-name: bottomAnim;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-delay: 0.2s;
+        animation-direction: alternate;
+
+        @keyframes bottomAnim {
+            from{
+                font-size: 1.5rem;
+            }to{
+                font-size: 1.55rem;
+            }
+        }
+    }
+    .backBtn:active, .formBtn:active, .btn:active {
+        outline: none;
+        box-shadow: none;
+    }
+    .backBtn:focus, .formBtn:focus, .btn:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+@include frontBasixES();

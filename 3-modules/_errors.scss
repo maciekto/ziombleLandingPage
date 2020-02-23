@@ -1,0 +1,22 @@
+.errorEmail{
+    position: absolute;
+    font-size: 1rem;
+    color: #F26716;
+}
+.errorPassword{
+    top: 0;
+    margin-top: 249px;
+    position: absolute;
+    font-size: 1rem;
+    color: #F26716;
+}
+.errorLogin{
+    top: 0;
+    margin-top: 5px;
+    position: absolute;
+    font-size: 1rem;
+    color: #F26716;
+}
+.inputErrorE,.inputErrorP, .inputErrorL{
+    border: 1px solid #F26716;
+}

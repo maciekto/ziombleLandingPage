@@ -1,0 +1,149 @@
+.registrationBox{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 280px;
+    height: 316px;
+    background: rgba($color: #8D9CA6, $alpha: 0.6);
+    border-radius: 17px;
+    border: 1px solid #EEEDEE ;
+    animation-name: opR;
+    animation-duration: 1.4s;
+    animation-iteration-count: 1;
+}
+#registrationForm{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 280px;
+    height: 316px;
+}
+.registrationLink{
+    cursor: pointer;
+    transition: 0.4s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 167px;
+    height: 66px;
+    background: rgba($color: #8D9CA6, $alpha: 0.6);
+    border-radius: 50px;
+    border: 1px solid #EEEDEE ;
+    animation-name: opR;
+    animation-duration: 1.4s;
+    animation-iteration-count: 1;
+    font-size: 1.9rem;
+    &:hover{
+        transition: 0.4s;
+        background: rgba($color: #8D9CA6, $alpha: 0.3);
+    }
+}
+@mixin basicMandHigher{
+    .registrationBoxPanel{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 340px;
+        height: 300px;
+        background: rgba($color: #8D9CA6, $alpha: 0.6);
+        border-radius: 17px;
+        border: 1px solid #EEEDEE ;
+        animation-name: opR;
+        animation-duration: 1.4s;
+        animation-iteration-count: 1;
+    }
+    section.registrationPanel{
+        width: 80vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        scroll-snap-align:center ;
+    }
+    .inputs{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    
+    .txtPanel{
+        color:#EEEDEE ;
+        //padding-top: 2rem;
+    }
+    @keyframes opR{
+        from{
+            opacity:0;
+        }to{
+            opacity: 1;
+        }
+    }
+}
+
+
+@media (max-width: 425px){
+    @include basicMandHigher();
+    .inputs{
+        flex-direction: column;
+    }
+    .loginEmail{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .passwordInputs{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .registrationBoxPanel{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 220px;
+        height: 400px;
+        background: rgba($color: #8D9CA6, $alpha: 0.6);
+        border-radius: 17px;
+        border: 1px solid #EEEDEE ;
+        animation-name: opR;
+        animation-duration: 1.4s;
+        animation-iteration-count: 1;
+    }
+    section.registrationPanel{
+        width: 80vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        scroll-snap-align:center ;
+    }
+  }
+  //small
+  @media (min-height: 620px),(min-width: 426px){
+    @include basicMandHigher();
+  }
+  //medium
+  @media (min-height: 1200px),(min-width: 768px){
+    @include basicMandHigher();
+  }
+  //large
+  @media (min-width: 1024px){
+    @include basicMandHigher();
+  }
+  //extraLarge
+  @media (min-width: 1440px){
+    @include basicMandHigher();
+  }

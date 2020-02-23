@@ -1,0 +1,1679 @@
+/* IMPORT ALL SASS DIRECTORY FILES */
+/* USING MIXIN WITH MEDIA QUERY FOR PRACTICE */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+.toTheTop {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  position: fixed;
+  background: rgba(141, 156, 166, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.6rem;
+  color: #DFE5F2;
+  border: 1px solid #DFE5F2;
+  border-radius: 40px;
+  width: 60px;
+  height: 60px;
+  right: 0;
+  bottom: 0;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.toTheTop:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background: rgba(141, 156, 166, 0.2);
+}
+
+.frontPage {
+  scroll-snap-align: center;
+  font-size: 2rem;
+  color: #DFE5F2;
+  width: 100vw;
+  height: 100vh;
+  background: url("cssimg/ziombleLandingPage.png") center center no-repeat;
+  background-size: cover;
+}
+
+.frontPageGrid {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 8fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 8fr 1fr 1fr 1fr;
+      grid-template-areas: "topS" "panels" "." "." "bottomS";
+}
+
+.topSentence {
+  height: 3rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: topS;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 5px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.panels {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: panels;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bottomSentence {
+  font-size: 1.5rem;
+  height: 40px;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: bottomS;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.animateBottom {
+  -webkit-animation-name: bottomAnim;
+          animation-name: bottomAnim;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes bottomAnim {
+  from {
+    font-size: 1.5rem;
+  }
+  to {
+    font-size: 1.55rem;
+  }
+}
+
+@keyframes bottomAnim {
+  from {
+    font-size: 1.5rem;
+  }
+  to {
+    font-size: 1.55rem;
+  }
+}
+
+.backBtn:active, .formBtn:active, .btn:active {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.backBtn:focus, .formBtn:focus, .btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+article {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+  border-bottom: 2px solid #525657;
+}
+
+.mainFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#beginning {
+  background: url("cssimg/ziombleBody1.png") center center no-repeat;
+  background-size: cover;
+}
+
+#offer {
+  background: url("cssimg/ziombleBody2.png") center center no-repeat;
+  background-size: cover;
+}
+
+#goal {
+  background: url("cssimg/ziombleBody3.png") center center no-repeat;
+  background-size: cover;
+}
+
+#registration {
+  background: url("cssimg/ziombleBody2.png") center center no-repeat;
+  background-size: cover;
+}
+
+.blackBg {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+h2, p {
+  margin: 0;
+  padding: 0;
+  color: #DFE5F2;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+p {
+  font-weight: 300;
+  margin-top: 20px;
+  font-size: 1.4rem;
+}
+
+a:active, a:visited, a:focus, a {
+  color: #DFE5F2;
+  text-decoration: none;
+}
+
+a.yellowLink:hover, a.yellowLink:active, a.yellowLink:visited, a.yellowLink {
+  color: #F2CB05;
+  text-decoration: none;
+}
+
+nav {
+  margin-top: 1.5rem;
+  background-color: rgba(223, 229, 242, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+  width: 100vw;
+  height: 4vh;
+  color: #F2CB05;
+}
+
+section {
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  scroll-snap-align: center;
+}
+
+aside {
+  font-size: 2rem;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 425px) and (max-height: 619px) {
+  article {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: center;
+    border-bottom: 2px solid #525657;
+  }
+  .mainFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #beginning {
+    background: url("cssimg/ziombleBody1.png") center center no-repeat;
+    background-size: cover;
+  }
+  #offer {
+    background: url("cssimg/ziombleBody2.png") center center no-repeat;
+    background-size: cover;
+  }
+  #goal {
+    background: url("cssimg/ziombleBody3.png") center center no-repeat;
+    background-size: cover;
+  }
+  #registration {
+    background: url("cssimg/ziombleBody2.png") center center no-repeat;
+    background-size: cover;
+  }
+  .blackBg {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  h2, p {
+    margin: 0;
+    padding: 0;
+    color: #DFE5F2;
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  p {
+    font-weight: 300;
+    margin-top: 20px;
+    font-size: 1.4rem;
+  }
+  a:active, a:visited, a:focus, a {
+    color: #DFE5F2;
+    text-decoration: none;
+  }
+  a.yellowLink:hover, a.yellowLink:active, a.yellowLink:visited, a.yellowLink {
+    color: #F2CB05;
+    text-decoration: none;
+  }
+  nav {
+    margin-top: 1.5rem;
+    background-color: rgba(223, 229, 242, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 2rem;
+    width: 100vw;
+    height: 4vh;
+    color: #F2CB05;
+  }
+  section {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    scroll-snap-align: center;
+  }
+  aside {
+    font-size: 2rem;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-height: 620px), (min-width: 426px) {
+  article {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: center;
+    border-bottom: 2px solid #525657;
+  }
+  .mainFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #beginning {
+    background: url("cssimg/ziombleBody1.png") center center no-repeat;
+    background-size: cover;
+  }
+  #offer {
+    background: url("cssimg/ziombleBody2.png") center center no-repeat;
+    background-size: cover;
+  }
+  #goal {
+    background: url("cssimg/ziombleBody3.png") center center no-repeat;
+    background-size: cover;
+  }
+  #registration {
+    background: url("cssimg/ziombleBody2.png") center center no-repeat;
+    background-size: cover;
+  }
+  .blackBg {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  h2, p {
+    margin: 0;
+    padding: 0;
+    color: #DFE5F2;
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  p {
+    font-weight: 300;
+    margin-top: 20px;
+    font-size: 1.4rem;
+  }
+  a:active, a:visited, a:focus, a {
+    color: #DFE5F2;
+    text-decoration: none;
+  }
+  a.yellowLink:hover, a.yellowLink:active, a.yellowLink:visited, a.yellowLink {
+    color: #F2CB05;
+    text-decoration: none;
+  }
+  nav {
+    margin-top: 1.5rem;
+    background-color: rgba(223, 229, 242, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 2rem;
+    width: 100vw;
+    height: 4vh;
+    color: #F2CB05;
+  }
+  section {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    scroll-snap-align: center;
+  }
+  aside {
+    font-size: 2rem;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-height: 1200px), (min-width: 768px) {
+  article {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: center;
+    border-bottom: 2px solid #525657;
+  }
+  .mainFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #beginning {
+    background: url("cssimg/ziombleBody1.png") center center no-repeat;
+    background-size: cover;
+  }
+  #offer {
+    background: url("cssimg/ziombleBody2.png") center center no-repeat;
+    background-size: cover;
+  }
+  #goal {
+    background: url("cssimg/ziombleBody3.png") center center no-repeat;
+    background-size: cover;
+  }
+  #registration {
+    background: url("cssimg/ziombleBody2.png") center center no-repeat;
+    background-size: cover;
+  }
+  .blackBg {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  h2, p {
+    margin: 0;
+    padding: 0;
+    color: #DFE5F2;
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  p {
+    font-weight: 300;
+    margin-top: 20px;
+    font-size: 1.4rem;
+  }
+  a:active, a:visited, a:focus, a {
+    color: #DFE5F2;
+    text-decoration: none;
+  }
+  a.yellowLink:hover, a.yellowLink:active, a.yellowLink:visited, a.yellowLink {
+    color: #F2CB05;
+    text-decoration: none;
+  }
+  nav {
+    margin-top: 1.5rem;
+    background-color: rgba(223, 229, 242, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 2rem;
+    width: 100vw;
+    height: 4vh;
+    color: #F2CB05;
+  }
+  section {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    scroll-snap-align: center;
+  }
+  aside {
+    font-size: 2rem;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-size: 3.6rem;
+  }
+  p {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  article {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: center;
+    border-bottom: 2px solid #525657;
+  }
+  .mainFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #beginning {
+    background: url("cssimg/ziombleBody1.png") center center no-repeat;
+    background-size: cover;
+  }
+  #offer {
+    background: url("cssimg/ziombleBody2.png") center center no-repeat;
+    background-size: cover;
+  }
+  #goal {
+    background: url("cssimg/ziombleBody3.png") center center no-repeat;
+    background-size: cover;
+  }
+  #registration {
+    background: url("cssimg/ziombleBody2.png") center center no-repeat;
+    background-size: cover;
+  }
+  .blackBg {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  h2, p {
+    margin: 0;
+    padding: 0;
+    color: #DFE5F2;
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  p {
+    font-weight: 300;
+    margin-top: 20px;
+    font-size: 1.4rem;
+  }
+  a:active, a:visited, a:focus, a {
+    color: #DFE5F2;
+    text-decoration: none;
+  }
+  a.yellowLink:hover, a.yellowLink:active, a.yellowLink:visited, a.yellowLink {
+    color: #F2CB05;
+    text-decoration: none;
+  }
+  nav {
+    margin-top: 1.5rem;
+    background-color: rgba(223, 229, 242, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 2rem;
+    width: 100vw;
+    height: 4vh;
+    color: #F2CB05;
+  }
+  section {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    scroll-snap-align: center;
+  }
+  aside {
+    font-size: 2rem;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  article {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: center;
+    border-bottom: 2px solid #525657;
+  }
+  .mainFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #beginning {
+    background: url("cssimg/ziombleBody1.png") center center no-repeat;
+    background-size: cover;
+  }
+  #offer {
+    background: url("cssimg/ziombleBody2.png") center center no-repeat;
+    background-size: cover;
+  }
+  #goal {
+    background: url("cssimg/ziombleBody3.png") center center no-repeat;
+    background-size: cover;
+  }
+  #registration {
+    background: url("cssimg/ziombleBody2.png") center center no-repeat;
+    background-size: cover;
+  }
+  .blackBg {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  h2, p {
+    margin: 0;
+    padding: 0;
+    color: #DFE5F2;
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  p {
+    font-weight: 300;
+    margin-top: 20px;
+    font-size: 1.4rem;
+  }
+  a:active, a:visited, a:focus, a {
+    color: #DFE5F2;
+    text-decoration: none;
+  }
+  a.yellowLink:hover, a.yellowLink:active, a.yellowLink:visited, a.yellowLink {
+    color: #F2CB05;
+    text-decoration: none;
+  }
+  nav {
+    margin-top: 1.5rem;
+    background-color: rgba(223, 229, 242, 0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 2rem;
+    width: 100vw;
+    height: 4vh;
+    color: #F2CB05;
+  }
+  section {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    scroll-snap-align: center;
+  }
+  aside {
+    font-size: 2rem;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+.btn {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 28px;
+  width: 167px;
+  height: 56px;
+  background: rgba(141, 156, 166, 0.6);
+  margin-bottom: 20px;
+  border: 1px solid #DFE5F2;
+}
+
+.btn:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: rgba(141, 156, 166, 0.4);
+}
+
+.formBtn {
+  padding-right: 0px;
+  color: #DFE5F2;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  font-size: 15px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 15px;
+  width: 100px;
+  height: 30px;
+  background: rgba(141, 156, 166, 0.6);
+  margin-bottom: 20px;
+  border: 1px solid #DFE5F2;
+}
+
+.formBtn:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: rgba(141, 156, 166, 0.2);
+  color: #DFE5F2;
+}
+
+.formBtn:active {
+  color: #DFE5F2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-decoration: none;
+}
+
+.formBtn:focus {
+  color: #DFE5F2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-decoration: none;
+}
+
+.loginBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 280px;
+  height: 158px;
+  background: rgba(141, 156, 166, 0.6);
+  border-radius: 17px;
+  border: 1px solid #EEEDEE;
+  -webkit-animation-name: opL;
+          animation-name: opL;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+#loginForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 280px;
+  height: 158px;
+  border-radius: 17px;
+  border: 1px solid #EEEDEE;
+}
+
+@-webkit-keyframes opL {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opL {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.registrationBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 280px;
+  height: 316px;
+  background: rgba(141, 156, 166, 0.6);
+  border-radius: 17px;
+  border: 1px solid #EEEDEE;
+  -webkit-animation-name: opR;
+          animation-name: opR;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+#registrationForm {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 280px;
+  height: 316px;
+}
+
+.registrationLink {
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 167px;
+  height: 66px;
+  background: rgba(141, 156, 166, 0.6);
+  border-radius: 50px;
+  border: 1px solid #EEEDEE;
+  -webkit-animation-name: opR;
+          animation-name: opR;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  font-size: 1.9rem;
+}
+
+.registrationLink:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background: rgba(141, 156, 166, 0.3);
+}
+
+@media (max-width: 425px) {
+  .registrationBoxPanel {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 340px;
+    height: 300px;
+    background: rgba(141, 156, 166, 0.6);
+    border-radius: 17px;
+    border: 1px solid #EEEDEE;
+    -webkit-animation-name: opR;
+            animation-name: opR;
+    -webkit-animation-duration: 1.4s;
+            animation-duration: 1.4s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+  section.registrationPanel {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    scroll-snap-align: center;
+  }
+  .inputs {
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .txtPanel {
+    color: #EEEDEE;
+  }
+  @-webkit-keyframes opR {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes opR {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .loginEmail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .passwordInputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .registrationBoxPanel {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 220px;
+    height: 400px;
+    background: rgba(141, 156, 166, 0.6);
+    border-radius: 17px;
+    border: 1px solid #EEEDEE;
+    -webkit-animation-name: opR;
+            animation-name: opR;
+    -webkit-animation-duration: 1.4s;
+            animation-duration: 1.4s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+  section.registrationPanel {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    scroll-snap-align: center;
+  }
+}
+
+@media (min-height: 620px), (min-width: 426px) {
+  .registrationBoxPanel {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 340px;
+    height: 300px;
+    background: rgba(141, 156, 166, 0.6);
+    border-radius: 17px;
+    border: 1px solid #EEEDEE;
+    -webkit-animation-name: opR;
+            animation-name: opR;
+    -webkit-animation-duration: 1.4s;
+            animation-duration: 1.4s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+  section.registrationPanel {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    scroll-snap-align: center;
+  }
+  .inputs {
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .txtPanel {
+    color: #EEEDEE;
+  }
+  @-webkit-keyframes opR {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes opR {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-height: 1200px), (min-width: 768px) {
+  .registrationBoxPanel {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 340px;
+    height: 300px;
+    background: rgba(141, 156, 166, 0.6);
+    border-radius: 17px;
+    border: 1px solid #EEEDEE;
+    -webkit-animation-name: opR;
+            animation-name: opR;
+    -webkit-animation-duration: 1.4s;
+            animation-duration: 1.4s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+  section.registrationPanel {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    scroll-snap-align: center;
+  }
+  .inputs {
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .txtPanel {
+    color: #EEEDEE;
+  }
+  @-webkit-keyframes opR {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes opR {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .registrationBoxPanel {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 340px;
+    height: 300px;
+    background: rgba(141, 156, 166, 0.6);
+    border-radius: 17px;
+    border: 1px solid #EEEDEE;
+    -webkit-animation-name: opR;
+            animation-name: opR;
+    -webkit-animation-duration: 1.4s;
+            animation-duration: 1.4s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+  section.registrationPanel {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    scroll-snap-align: center;
+  }
+  .inputs {
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .txtPanel {
+    color: #EEEDEE;
+  }
+  @-webkit-keyframes opR {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes opR {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .registrationBoxPanel {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 340px;
+    height: 300px;
+    background: rgba(141, 156, 166, 0.6);
+    border-radius: 17px;
+    border: 1px solid #EEEDEE;
+    -webkit-animation-name: opR;
+            animation-name: opR;
+    -webkit-animation-duration: 1.4s;
+            animation-duration: 1.4s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+  section.registrationPanel {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    scroll-snap-align: center;
+  }
+  .inputs {
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .txtPanel {
+    color: #EEEDEE;
+  }
+  @-webkit-keyframes opR {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes opR {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+input {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #707070;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 140px;
+  height: 24px;
+  border-radius: 10px;
+  background: rgba(223, 229, 242, 0.8);
+  border: 1px solid #EEEDEE;
+}
+
+input:focus {
+  outline: none;
+  color: #707070;
+}
+
+input[type=submit] {
+  padding: 0 0 0 0;
+}
+
+.backBtn {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  margin-left: 20px;
+  width: 0px;
+  height: 0px;
+  font-size: 2.5rem;
+  -webkit-animation-name: back;
+          animation-name: back;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.backBtnHiddenR {
+  top: 45%;
+}
+
+@-webkit-keyframes back {
+  from {
+    margin-left: 20px;
+  }
+  to {
+    margin-left: 10px;
+  }
+}
+
+@keyframes back {
+  from {
+    margin-left: 20px;
+  }
+  to {
+    margin-left: 10px;
+  }
+}
+
+.errorEmail {
+  position: absolute;
+  font-size: 1rem;
+  color: #F26716;
+}
+
+.errorPassword {
+  top: 0;
+  margin-top: 249px;
+  position: absolute;
+  font-size: 1rem;
+  color: #F26716;
+}
+
+.errorLogin {
+  top: 0;
+  margin-top: 5px;
+  position: absolute;
+  font-size: 1rem;
+  color: #F26716;
+}
+
+.inputErrorE, .inputErrorP, .inputErrorL {
+  border: 1px solid #F26716;
+}
+/*# sourceMappingURL=app.css.map */

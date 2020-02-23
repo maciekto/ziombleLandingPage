@@ -1,0 +1,32 @@
+.loginBox{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 280px;
+    height: 158px;
+    background: rgba($color: #8D9CA6, $alpha: 0.6);
+    border-radius: 17px;
+    border: 1px solid #EEEDEE ;
+    animation-name: opL;
+    animation-duration: 1.4s;
+    animation-iteration-count: 1;
+}
+#loginForm{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 280px;
+    height: 158px;
+    border-radius: 17px;
+    border: 1px solid #EEEDEE ;
+}
+@keyframes opL{
+    from{
+        opacity:0;
+    }to{
+        opacity: 1;
+    }
+}

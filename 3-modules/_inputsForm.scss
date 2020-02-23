@@ -1,0 +1,19 @@
+input{
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #707070;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 140px;
+    height: 24px;
+    border-radius: 10px;
+    background: rgba($color: #DFE5F2, $alpha: 0.8);
+    border: 1px solid #EEEDEE;
+}
+input:focus{
+    outline: none;
+    color: #707070;
+}
+input[type=submit]{
+    padding: 0 0 0 0;
+}

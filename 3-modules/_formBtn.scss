@@ -1,0 +1,32 @@
+.formBtn{
+    padding-right: 0px;
+    color:#DFE5F2 ;
+    transition: 0.4s;
+    //@at-root: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+    background: rgba($color: #8D9CA6, $alpha: 0.6);
+    margin-bottom: 20px;
+    border: 1px solid #DFE5F2;
+    &:hover{
+        transition: 0.4s;
+        background-color: rgba($color: #8D9CA6, $alpha: 0.2);
+        color:#DFE5F2 ;
+    }
+    &:active{
+        color:#DFE5F2 ;
+        box-shadow: none;
+        text-decoration: none;
+    }
+    &:focus{
+        color:#DFE5F2 ;
+        box-shadow: none;
+        text-decoration: none;
+    }
+}
